@@ -1,0 +1,9 @@
+version: '3'
+services:
+  redis:
+    volumes: 
+      - ./:/redis-conf
+    image: redis
+    command: redis-server /redis-conf/redis.conf
+    ports:
+      - "6379:6379"
